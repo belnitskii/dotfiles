@@ -15,7 +15,7 @@ sudo yabai --load-sa
 
 # global settings
 yabai -m config                                 \
-	      external_bar                 all:35:0       \
+	      external_bar                 all:30:0       \
 	      menubar_opacity              1.0            \
 	      mouse_follows_focus          off            \
 	      focus_follows_mouse          off            \
@@ -35,10 +35,10 @@ yabai -m config                                 \
 	      split_ratio                  0.50           \
 	      split_type                   auto           \
 	      auto_balance                 off            \
-	      top_padding                  12             \
-	      bottom_padding               12             \
-	      left_padding                 12             \
-	      right_padding                12             \
+	      top_padding                  8             \
+	      bottom_padding               6             \
+	      left_padding                 8             \
+	      right_padding                8             \
 	      window_gap                   06             \
 	      layout                       bsp            \
 	      mouse_modifier               fn             \
@@ -49,4 +49,5 @@ yabai -m config                                 \
 	      yabai -m space 3 --label code
 
 	      yabai -m rule --add app="^Code$" space=code
+          yabai -m rule --add app="System Preferences|Mail|Calculator|App Store" manage=off
 	      echo "yabai configuration loaded.."

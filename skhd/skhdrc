@@ -1,10 +1,15 @@
+
 # focus window
 alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
+alt - j [
+    "IntelliJ Idea" ~
+    * : yabai -m window --focus south
+]
+alt - k [
+    "IntelliJ Idea" ~ 
+    * : yabai -m window --focus north
+]
 alt - l : yabai -m window --focus east
-
-
 
 # swap window
 shift + alt - h : yabai -m window --swap west
@@ -72,11 +77,16 @@ shift + alt - n : yabai -m space --create && \
 ctrl + alt + cmd - r : yabai --restart-service
 
 
-#check opend apps on current workflow
+#check opened apps on current workflow
 #yabai -m query --windows --space | jq '.[] | .app'
 alt - c : open -a 'IntelliJ IDEA'
 alt - u : open -a 'Google Chrome'
 alt - m : open -a 'Yandex Music'
 alt - n : open -a 'Notion' 
-alt - i : open -a 'iTerm2' 
-alt - o : open -a 'Obsidian' 
+alt - i : open -a 'iTerm.app'
+alt - o : open -a 'Obsidian'
+alt - g : open -a 'Telegram'
+alt - x : open -a 'Firefox'
+
+# send window to desktop and follow focus
+ shift + alt - z : yabai -m window --space next; yabai -m space --focus next
