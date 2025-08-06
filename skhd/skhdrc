@@ -1,6 +1,9 @@
 
 # focus window
-alt - h : yabai -m window --focus west
+alt - h [
+    * : yabai -m window --focus west
+    "IntelliJ Idea" ~
+]
 alt - j [
     "IntelliJ Idea" ~
     * : yabai -m window --focus south
@@ -9,7 +12,10 @@ alt - k [
     "IntelliJ Idea" ~ 
     * : yabai -m window --focus north
 ]
-alt - l : yabai -m window --focus east
+alt - l [
+    * : yabai -m window --focus east
+    "IntelliJ Idea" ~
+]
 
 # swap window
 shift + alt - h : yabai -m window --swap west
