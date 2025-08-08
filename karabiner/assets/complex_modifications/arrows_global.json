@@ -1,0 +1,136 @@
+{
+  "title": "Arrows (GLOBAL)",
+  "rules": [
+    {
+      "description": "Left Control → HJKL as arrows (Global)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["left_control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": ["left_control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "down_arrow"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": ["left_control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": ["left_control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Right Command → HJKL as arrows (Global)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["right_command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": ["right_command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "down_arrow"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": ["right_command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": ["right_command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

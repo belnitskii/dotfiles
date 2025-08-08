@@ -1,0 +1,148 @@
+{
+  "title": "Vim-motion (Preview)",
+  "rules": [
+    {
+      "description": "J/K → Down/Up Arrow (Preview only)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "j" },
+          "to": [{ "key_code": "down_arrow" }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com.apple.Preview$"] }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "k" },
+          "to": [{ "key_code": "up_arrow" }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com.apple.Preview$"] }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Shift+J/K → Option+Down/Up Arrow (Preview only)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "j", "modifiers": { "mandatory": ["left_shift"] } },
+          "to": [{ "key_code": "down_arrow", "modifiers": ["left_option"] }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com.apple.Preview$"] }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "k", "modifiers": { "mandatory": ["left_shift"] } },
+          "to": [{ "key_code": "up_arrow", "modifiers": ["left_option"] }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com.apple.Preview$"] }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "H/L → Left/Right Arrow (Preview only)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "h" },
+          "to": [{ "key_code": "left_arrow" }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com.apple.Preview$"] }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "l" },
+          "to": [{ "key_code": "right_arrow" }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com.apple.Preview$"] }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Shift+H/L → Cmd+[ / Cmd+] (Preview only)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "h", "modifiers": { "mandatory": ["left_shift"] } },
+          "to": [{ "key_code": "open_bracket", "modifiers": ["left_command"] }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com.apple.Preview$"] }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "l", "modifiers": { "mandatory": ["left_shift"] } },
+          "to": [{ "key_code": "close_bracket", "modifiers": ["left_command"] }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com.apple.Preview$"] }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "9/0/-/= → Cmd+9/0/-/= (Zoom in Preview)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "9" },
+          "to": [{ "key_code": "9", "modifiers": ["left_command"] }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com.apple.Preview$"] }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "0" },
+          "to": [{ "key_code": "0", "modifiers": ["left_command"] }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com.apple.Preview$"] }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "hyphen" },
+          "to": [{ "key_code": "hyphen", "modifiers": ["left_command"] }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com.apple.Preview$"] }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "equal_sign" },
+          "to": [{ "key_code": "equal_sign", "modifiers": ["left_command"] }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com.apple.Preview$"] }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "G/g → Cmd+Up/Down Arrow (Preview only)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "g" },
+          "to": [{ "key_code": "up_arrow", "modifiers": ["left_command"] }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com.apple.Preview$"] }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "g", "modifiers": { "mandatory": ["left_shift"] } },
+          "to": [{ "key_code": "down_arrow", "modifiers": ["left_command"] }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^com.apple.Preview$"] }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
