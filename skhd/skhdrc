@@ -1,21 +1,13 @@
+# ignore list
+alt + shift - i : ~/.config/skhd/skhd_ignore.sh add
+alt + shift - u : ~/.config/skhd/skhd_ignore.sh remove
 
 # focus window
-alt - h [
-    * : yabai -m window --focus west
-    "IntelliJ Idea" ~
-]
-alt - j [
-    "IntelliJ Idea" ~
-    * : yabai -m window --focus south
-]
-alt - k [
-    "IntelliJ Idea" ~ 
-    * : yabai -m window --focus north
-]
-alt - l [
-    * : yabai -m window --focus east
-    "IntelliJ Idea" ~
-]
+alt - h : ~/.config/skhd/check_ignore_and_focus.sh west
+alt - j : ~/.config/skhd/check_ignore_and_focus.sh south
+alt - k : ~/.config/skhd/check_ignore_and_focus.sh north
+alt - l : ~/.config/skhd/check_ignore_and_focus.sh east
+
 
 # swap window
 shift + alt - h : yabai -m window --swap west
