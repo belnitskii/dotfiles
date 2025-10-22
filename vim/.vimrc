@@ -5,9 +5,15 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" Принудительная установка TERM
+if $TERM == 'dumb'
+    let &term = 'xterm-256color'
+endif
+
 " === Инициализация плагинов ===
 call plug#begin('~/.vim/plugged')
 
+" Настройка для LSP сервера
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
@@ -21,6 +27,8 @@ Plug 'bkad/CamelCaseMotion'
 Plug 'christoomey/vim-tmux-navigator'
 " Мульти курсор
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+" Автозакрытие тегов
+Plug 'alvan/vim-closetag'
 
 " Popup menu от Coc.nvim
 highlight! link Pmenu CmpPmenu
@@ -38,8 +46,19 @@ map ge <Plug>CamelCaseMotion_ge
 
 call plug#end()
 
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=4
+
 let mapleader = ' '
 nnoremap <silent> <leader><leader> <Plug>(coc-format)
+nnoremap <silent> <leader>ca :<C-u>CocAction<CR>
+
+" Список типов файлов, для которых работает vim-closetag
+let g:closetag_filetypes = 'html,xml,xsl,xhtml'
+" Часто вам также захочется, чтобы он работал сразу после закрытия тега (>)
+let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.xsl'
 
 
 " === Настройки vim-im-select для macOS ===
