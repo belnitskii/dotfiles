@@ -1,8 +1,8 @@
 {
-  "title": "Default Commands",
+  "title": "Default commands",
   "rules": [
     {
-      "description": "Caps Lock → Escape (tap) / Caps Lock (hold)",
+      "description": "Caps Lock → Control (if held with other keys) / Escape (if pressed alone)",
       "manipulators": [
         {
           "type": "basic",
@@ -12,14 +12,14 @@
               "optional": ["any"]
             }
           },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
           "to_if_alone": [
             {
               "key_code": "escape"
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "caps_lock"
             }
           ],
           "parameters": {
@@ -65,4 +65,3 @@
     }
   ]
 }
-

@@ -44,21 +44,21 @@ shift + alt - 0 : yabai -m window --space  10; yabai -m space --focus 10
 
 
 # toggle window zoom
-alt - d : yabai -m window --toggle zoom-parent
+alt - r : yabai -m window --toggle zoom-parent
 alt - f : yabai -m window --toggle zoom-fullscreen
 
 # decrease window size
-shift + cmd - a : yabai -m window --resize left:20:0
-shift + cmd - w : yabai -m window --resize top:0:20
-shift + cmd - d : yabai -m window --resize right:-20:0
-shift + cmd - s : yabai -m window --resize bottom:0:-20
+shift + alt - a : yabai -m window --resize left:20:0
+shift + alt - w : yabai -m window --resize top:0:20
+shift + alt - d : yabai -m window --resize right:-20:0
+shift + alt - s : yabai -m window --resize bottom:0:-20
 
 
 # increase window size
-shift + alt - a : yabai -m window --resize left:-20:0
-shift + alt - w : yabai -m window --resize top:0:-20
-shift + alt - d : yabai -m window --resize right:20:0
-shift + alt - s : yabai -m window --resize bottom:0:20
+alt - a : yabai -m window --resize left:-20:0
+alt - w : yabai -m window --resize top:0:-20
+alt - d : yabai -m window --resize right:20:0
+alt - s : yabai -m window --resize bottom:0:20
 
 
 # toggle window split type
@@ -81,10 +81,11 @@ alt - c : open -a 'IntelliJ IDEA'
 alt - u : open -a 'Google Chrome'
 alt - m : open -a 'Yandex Music'
 alt - n : open -a 'Notion' 
-alt - i : open -a 'iTerm.app'
+#alt - i : open -a 'iTerm.app'
 alt - o : open -a 'Obsidian'
 alt - g : open -a 'Telegram'
 alt - x : open -a 'Firefox'
+alt - i : open -a 'Alacritty'
 
 # send window to desktop and follow focus
  shift + alt - z : yabai -m window --space next; yabai -m space --focus next

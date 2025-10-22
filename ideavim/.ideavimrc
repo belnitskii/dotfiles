@@ -1,10 +1,27 @@
 " === Basic settings ===
 source ~/.vimrc
+set multiple-cursors
 set NERDTree
 set switch
 let g:switch_definitions = 'group:basic,group:java'
 set ideajoin          " Smart line join
 let mapleader = ' '
+
+" Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+
+" Note that the default <A-n> and g<A-n> shortcuts don't work on Mac due to dead keys.
+" <A-n> is used to enter accented text e.g. ñ
+" Feel free to pick your own mappings that are not affected. I like to use <leader>
+nmap <leader><C-n> <Plug>AllWholeOccurrences
+xmap <leader><C-n> <Plug>AllWholeOccurrences
+nmap <leader>g<C-n> <Plug>AllOccurrences
+xmap <leader>g<C-n> <Plug>AllOccurrences
 
 " === Switch mappings ===
 nmap <leader>ss :Switch<CR>
@@ -16,11 +33,27 @@ let g:WhichKeyDesc_switch_reverse = "<leader>ss Switch"
 noremap <leader>cc :edit ~/.ideavimrc<CR>
 noremap <leader>cs :source ~/.ideavimrc<CR>:nohlsearch<CR>
 
+" === Multiple-cursor mappings ===
+
+" Note that the default <A-n> and g<A-n> shortcuts don't work on Mac due to dead keys.
+" <A-n> is used to enter accented text e.g. ñ
+" Feel free to pick your own mappings that are not affected. I like to use <leader>
+nmap <leader><C-n> <Plug>AllWholeOccurrences
+xmap <leader><C-n> <Plug>AllWholeOccurrences
+nmap <leader>g<C-n> <Plug>AllOccurrences
+xmap <leader>g<C-n> <Plug>AllOccurrences
+
+" === Navigation: word motions ===
+map w  [w
+map e  ]w
+map b  [b
+map ge ]b
+
 " === Window navigation ===
-map <A-h> <C-w>h
-map <A-j> <C-w>j
-map <A-k> <C-w>k
-map <A-l> <C-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 map <leader>wv <Action>(SplitVertically)
 map <leader>wh <Action>(SplitHorizontally)
@@ -84,10 +117,10 @@ map <leader>oi       <Action>(OptimizeImports)
 map <leader>ra       <Action>(RearrangeCode)
 
 " === Moving code ===
-map <C-k> <Action>(MoveLineDown)
-map <C-l> <Action>(MoveLineUp)
-map <C-i> <Action>(MoveStatementDown)
-map <C-o> <Action>(MoveStatementUp)
+map <C-S-j> <Action>(MoveLineDown)
+map <C-S-k> <Action>(MoveLineUp)
+map <C-S-i> <Action>(MoveStatementDown)
+map <C-S-o> <Action>(MoveStatementUp)
 
 " === Copy paths ===
 map <leader>ca <Action>(CopyAbsolutePath)
@@ -120,3 +153,7 @@ let g:WhichKeyDesc_stop  = "<leader>0 Stop"
 
 " === Misc ===
 map <leader>rp <Action>(ManageRecentProjects)
+map <leader>m <Action>(MarkFileAs)
+map <leader>n <Action>(NewElement)
+map <leader>j <Action>(ActivateProjectToolWindow)
+map <leader>t <Action>(ActivateTerminalToolWindow)
